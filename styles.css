@@ -1,33 +1,62 @@
-/* Shift the hero image up to show more of the family */
-.hero-section {
-    /* Show the very top of the image */
-    background-position: top center;
-}
-/* Make the page take full height and push footer to the bottom */
-html, body {
-    height: 200%;
-    margin: 0;
-    padding: 0;
+/* 1. Define the Proxima Nova font if you have the files */
+/* Make sure you have the font files in a 'fonts' folder */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('fonts/proxima-nova-regular.woff2') format('woff2'),
+       url('fonts/proxima-nova-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
+/* 2. Apply the brand font to the entire page */
+/* We use 'sans-serif' as a fallback if the font doesn't load */
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Proxima Nova', sans-serif; 
 }
 
-main {
-    flex: 1;
-}
-/* Use Proxima Nova as the main font, with Avenir Next and sans-serif as fallbacks */
-body {
-    font-family: 'Proxima Nova', 'Avenir Next', Arial, sans-serif;
-}
-
-/* Custom hero section height for a bigger image */
+/* 3. Style the Hero Section */
+/* This makes the hero image take up the full height of the browser window */
 .hero-section {
-    height: calc(100vh - 40px); /* Make hero section taller for a bigger image */
-    min-height: 500px; /* Ensure it's always big on small screens */
+    height: 100vh; 
 }
 
-/* Footer stays at the bottom using flex layout (already set above) */
+/* 4. Style the main Call-to-Action buttons */
+/* This creates a reusable style for our donation buttons */
+.cta-button {
+    display: inline-block;
+    background-color: #FFC907; /* charity: water yellow */
+    color: #1A1A1A; /* charity: water black for text */
+    font-weight: bold;
+    padding: 1rem 2.5rem; /* 16px top/bottom, 40px left/right */
+    border-radius: 9999px; /* This makes the button a pill shape */
+    margin-top: 2rem; /* 32px of space above the button */
+    font-size: 1.125rem; /* 18px font size */
+    text-transform: uppercase;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Add a hover effect to make the button interactive */
+.cta-button:hover {
+    background-color: #ffe066; /* A slightly lighter yellow */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+/* A variation for dark text buttons on a light background */
+.cta-button.cta-button-dark {
+    background-color: #1A1A1A; /* Black background */
+    color: #FFFFFF; /* White text */
+}
+
+.cta-button.cta-button-dark:hover {
+     background-color: #333333; /* Dark gray on hover */
+}
+
+/* 5. Add Responsive Design using Media Queries */
+/* This CSS will only apply on screens smaller than 768px (like mobile phones) */
+@media (max-width: 768px) {
+    /* Make the hero headline slightly smaller on mobile to fit the screen */
+    .hero-section h1 {
+        font-size: 3rem; /* 48px font size */
+    }
+}
+

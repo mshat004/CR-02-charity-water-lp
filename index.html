@@ -8,60 +8,24 @@
     <!-- Tailwind CSS for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts (Avenir Next as fallback, since Proxima Nova is not on Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Use Avenir Next from Google Fonts as fallback -->
-    <link href="https://fonts.googleapis.com/css2?family=Avenir+Next:wght@400;700;900&display=swap" rel="stylesheet">
-    
     <!-- Link to your custom CSS file -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Add Proxima Nova font from local fonts folder -->
-    <style>
-        /* Tell the browser where to find Proxima Nova font files */
-        @font-face {
-            font-family: 'Proxima Nova';
-            src: url('fonts/ProximaNova-Regular.woff2') format('woff2'),
-                 url('fonts/ProximaNova-Regular.woff') format('woff');
-            font-weight: 400;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Proxima Nova';
-            src: url('fonts/ProximaNova-Bold.woff2') format('woff2'),
-                 url('fonts/ProximaNova-Bold.woff') format('woff');
-            font-weight: 700;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Proxima Nova';
-            src: url('fonts/ProximaNova-Black.woff2') format('woff2'),
-                 url('fonts/ProximaNova-Black.woff') format('woff');
-            font-weight: 900;
-            font-style: normal;
-        }
-    </style>
 </head>
-<body class="bg-black text-white">
+<body class="bg-white text-black">
 
     <!-- Header Section -->
     <header class="sticky top-0 z-50 bg-black bg-opacity-80 backdrop-blur-md">
         <div class="container mx-auto px-6 py-5 flex justify-between items-center">
-            <!-- Logo: Using the white text version for better contrast -->
+            <!-- Logo: White text version for contrast on dark header -->
             <a href="#">
-             <!-- Logo replaced with local charitywater_logo_horizontal_WhiteText image -->
-             <img src="img/charitywater_logo_horizontal_WhiteText.png" 
-                 alt="charity: water logo" 
-                 class="h-7 w-auto">
+             <img src="img/charitywater_logo_horizontal_WhiteText.png" alt="charity: water logo" class="h-7 w-auto">
             </a>
             
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-bold">
-                <a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300">Take Action</a>
-                <a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300">About Us</a>
-                <a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300">Why Water?</a>
-                <a href="#" class="bg-yellow-400 text-black py-2 px-6 rounded-full hover:bg-yellow-300 transition-colors duration-300">Give</a>
+                <a href="#story" class="text-white hover:text-yellow-400 transition-colors">Our Impact</a>
+                <a href="#about" class="text-white hover:text-yellow-400 transition-colors">Why Water?</a>
+                <a href="#cta" class="bg-yellow-400 text-black py-2 px-6 rounded-full hover:bg-yellow-300 transition-colors">Give Now</a>
             </nav>
             
             <!-- Mobile Menu Button -->
@@ -74,41 +38,33 @@
         
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90">
-            <a href="#" class="block text-center py-3 px-6 text-white hover:bg-gray-800">Take Action</a>
-            <a href="#" class="block text-center py-3 px-6 text-white hover:bg-gray-800">About Us</a>
-            <a href="#" class="block text-center py-3 px-6 text-white hover:bg-gray-800">Why Water?</a>
-            <a href="#" class="block text-center py-4 px-6 mt-2 mb-4 mx-6 bg-yellow-400 text-black rounded-full hover:bg-yellow-300">Give</a>
+            <a href="#story" class="block text-center py-3 px-6 text-white hover:bg-gray-800">Our Impact</a>
+            <a href="#about" class="block text-center py-3 px-6 text-white hover:bg-gray-800">Why Water?</a>
+            <a href="#cta" class="block text-center py-4 px-6 mt-2 mb-4 mx-6 bg-yellow-400 text-black rounded-full hover:bg-yellow-300">Give Now</a>
         </div>
     </header>
 
-    <!-- Main Content: Hero Section -->
+    <!-- Main Content -->
     <main>
-        <!-- The main container uses a background image with a dark overlay for text readability -->
-    <!-- Hero Section background image replaced with local Malawi_2023_CG-0565 image -->
-    <div class="relative bg-cover bg-center hero-section" style="background-image: url('img/Malawi_2023_CG-0565.jpg');" data-real-bg="Malawi_2023_CG-0565.jpg">
-            <!-- Semi-transparent overlay -->
+        <!-- Hero Section -->
+        <div class="relative bg-cover bg-center text-white hero-section" style="background-image: url('img/Malawi_2023_CG-0565.jpg');">
+            <!-- Semi-transparent overlay for text readability, as per brand guidelines -->
             <div class="absolute inset-0 bg-black opacity-60"></div>
             
             <!-- Hero Content -->
             <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-start text-left">
                 <div class="max-w-xl">
-                    <!-- Headline from your presentation -->
-                    <h1 class="text-5xl md:text-6xl font-black leading-tight">
-                        Give clean water, Track Your Impact!
+                    <h1 class="text-5xl md:text-6xl font-black leading-tight uppercase">
+                        Give Clean Water, Track Your Impact!
                     </h1>
-                    
-                    <!-- Main Call-to-Action Button -->
-                    <a href="#" class="inline-block bg-yellow-400 text-black font-bold py-4 px-10 rounded-full mt-8 text-lg hover:bg-yellow-300 transform hover:scale-105 transition-transform duration-300">
-                        Donate Now
-                    </a>
-                    
-                    <!-- Subheadline with donation impact -->
-                    <p class="mt-8 text-base md:text-lg max-w-md">
+                    <p class="mt-8 text-lg max-w-md">
                         $10.00 a month can provide clean water to <strong>3 people</strong> every year. 100% of funds go to water projects.
                     </p>
+                    <a href="#cta" class="cta-button">
+                        Donate Now
+                    </a>
                 </div>
-                
-                <!-- Location indicator from your design -->
+                 <!-- Location indicator from design -->
                 <div class="absolute bottom-10 left-6 flex items-center space-x-2 text-white opacity-80">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                      <span class="text-xl font-semibold">Malawi</span>
@@ -117,39 +73,46 @@
         </div>
 
         <!-- Story Section -->
-        <section class="bg-white text-black py-12">
-            <!-- Container for the story content -->
-            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-                <!-- Story Image -->
-                <img src="img/story_sample.jpg" alt="A family with clean water" class="w-full md:w-1/2 rounded-lg mb-6 md:mb-0 md:mr-8">
-                <!-- Story Text -->
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-4">Real Impact: Meet Grace's Family</h2>
-                    <p class="mb-4">
-                        Grace and her children used to walk miles every day to collect water. Now, thanks to your support, they have clean water right in their village. This means more time for school, work, and play.
-                    </p>
-                    <p>
-                        Your donation changes lives. Every dollar brings us closer to a world where everyone has access to clean water.
-                    </p>
+        <section id="story" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="md:flex md:items-center md:space-x-12">
+                    <!-- Image for the story section -->
+                    <div class="md:w-1/2">
+                        <!-- Placeholder image: replace with a hopeful image of someone using clean water -->
+                        <img src="https://placehold.co/600x400/FFF7E1/1A1A1A?text=Photo+of+Impact" alt="A person smiling while drinking clean water" class="rounded-lg shadow-lg w-full">
+                    </div>
+                    <!-- Text content for the story -->
+                    <div class="md:w-1/2 mt-8 md:mt-0">
+                        <h2 class="text-4xl font-black text-gray-900 uppercase">A Story of Hope</h2>
+                        <p class="mt-4 text-gray-600">
+                            For the first time, the people of the Abreha Atsbeha village have clean water. Before, women and children walked for hours to collect dirty water from a riverbed. Now, a new well means healthier families, more time for school, and a future filled with possibility.
+                        </p>
+                        <p class="mt-4 text-gray-600">
+                            Your donation makes stories like this possible.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action Section -->
-        <section class="bg-yellow-400 text-black py-10 text-center">
-            <!-- Simple call to action message and button -->
-            <h2 class="text-2xl font-bold mb-4">Ready to make a difference?</h2>
-            <p class="mb-6">Join us and help bring clean water to more families like Grace's.</p>
-            <a href="#" class="inline-block bg-black text-yellow-400 font-bold py-3 px-8 rounded-full hover:bg-gray-800 transition-colors duration-300">
-                Donate Now
-            </a>
+        <!-- Call to Action (CTA) Section -->
+        <section id="cta" class="bg-yellow-400 py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-black text-black uppercase">Ready to Make a Difference?</h2>
+                <p class="mt-4 text-xl text-black max-w-2xl mx-auto">
+                    Join us in the mission to bring clean and safe drinking water to every person on the planet. Your contribution, big or small, changes lives.
+                </p>
+                <a href="#" class="cta-button cta-button-dark">
+                    Give Clean Water
+                </a>
+            </div>
         </section>
     </main>
 
-    <!-- Simple Footer -->
+    <!-- Footer -->
     <footer class="bg-black py-6">
         <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
-            <p>&copy; 2025 charity: water | This is a conceptual design.</p>
+            <p>&copy; 2025 charity: water | This is a conceptual design for a project.</p>
         </div>
     </footer>
 
@@ -160,22 +123,6 @@
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-        });
-
-        // This is a helper to remind you where to put your real image sources.
-        // In a real project, you would just use the correct `src` and `style` attributes directly.
-        document.addEventListener('DOMContentLoaded', () => {
-            const realSrcElements = document.querySelectorAll('[data-real-src]');
-            realSrcElements.forEach(el => {
-                // In a real project, you'd replace the placeholder `src` with the value from `data-real-src`.
-                // For now, this just logs it to the console.
-                console.log(`Replace ${el.src} with ${el.dataset.realSrc}`);
-            });
-            
-            const realBgElements = document.querySelectorAll('[data-real-bg]');
-            realBgElements.forEach(el => {
-                console.log(`Replace background image with ${el.dataset.realBg}`);
-            });
         });
     </script>
 
