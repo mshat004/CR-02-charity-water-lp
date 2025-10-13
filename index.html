@@ -19,7 +19,8 @@
             <!-- Logo: White text version for contrast on dark header -->
             <a href="#"><img src="img/charitywater_logo_horizontal_WhiteText.png" alt="charity: water logo" class="h-7 w-auto"></a>
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-bold">
+            <nav class="hidden md:flex items-center space-x-12 text-sm font-bold tracking-wider">
+                <!-- Added tracking-wider for more letter spacing -->
                 <a href="#take-action" class="text-white hover:text-yellow-400">Take Action</a>
                 <a href="#story" class="text-white hover:text-yellow-400">Our Impact</a>
                 <a href="#about" class="text-white hover:text-yellow-400">Why Water?</a>
@@ -113,6 +114,86 @@
                 <a href="#" class="bg-black text-yellow-400 py-2 px-6 rounded-full hover:bg-gray-800 font-bold mt-8 inline-block">
                     Give Clean Water
                 </a>
+                <!-- Horizontally scrollable action cards section for beginners -->
+                <div class="mt-12 overflow-x-auto">
+                    <div class="flex space-x-6 pb-4" style="min-width:600px;">
+                        <!-- Each card is a simple div with an image and bold text -->
+                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                            <img src="https://placehold.co/120x80?text=Image" alt="Join Monthly Giving" class="mb-3 rounded">
+                            <span class="font-bold text-center">Join Monthly Giving</span>
+                        </div>
+                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                            <img src="https://placehold.co/120x80?text=Image" alt="Sponsor a Water Project" class="mb-3 rounded">
+                            <span class="font-bold text-center">Sponsor a Water Project</span>
+                        </div>
+                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                            <img src="https://placehold.co/120x80?text=Image" alt="Start a Fundraiser" class="mb-3 rounded">
+                            <span class="font-bold text-center">Start a Fundraiser</span>
+                        </div>
+                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                            <img src="https://placehold.co/120x80?text=Image" alt="Give to a Fundraiser" class="mb-3 rounded">
+                            <span class="font-bold text-center">Give to a Fundraiser</span>
+                        </div>
+                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                            <img src="https://placehold.co/120x80?text=Image" alt="Plan Legacy Giving" class="mb-3 rounded">
+                            <span class="font-bold text-center">Plan Legacy Giving</span>
+                        </div>
+                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                            <img src="https://placehold.co/120x80?text=Image" alt="Become a Brand Partner" class="mb-3 rounded">
+                            <span class="font-bold text-center">Become a Brand Partner</span>
+                        </div>
+                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                            <img src="https://placehold.co/120x80?text=Image" alt="Honor Someone Special" class="mb-3 rounded">
+                            <span class="font-bold text-center">Honor Someone Special</span>
+                        </div>
+                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                            <img src="https://placehold.co/120x80?text=Image" alt="Join Tiny Heroes" class="mb-3 rounded">
+                            <span class="font-bold text-center">Join Tiny Heroes</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Newsletter Subscribe Form Section -->
+                <div class="bg-white rounded-lg shadow-md p-8 mt-24 max-w-lg mx-auto text-left">
+                    <!-- Increased mt-12 to mt-24 to shift the inbox form further down -->
+                    <h3 class="text-2xl font-bold text-black mb-2 text-center">Add Impact To Your Inbox</h3>
+                    <p class="text-center text-gray-600 mb-4">Get our emails to stay in the know.</p>
+                    <form>
+                        <!-- First Name and Last Name fields -->
+                        <div class="flex flex-col md:flex-row md:space-x-4">
+                            <div class="flex-1 mb-4">
+                                <label for="first-name" class="block text-sm font-semibold mb-1 text-black">First Name</label>
+                                <input type="text" id="first-name" name="first-name" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                            </div>
+                            <div class="flex-1 mb-4">
+                                <label for="last-name" class="block text-sm font-semibold mb-1 text-black">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                            </div>
+                        </div>
+                        <!-- Email field -->
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-semibold mb-1 text-black">Email</label>
+                            <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                        </div>
+                        <!-- Date of Birth field -->
+                        <div class="mb-4">
+                            <label for="dob" class="block text-sm font-semibold mb-1 text-black">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                        </div>
+                        <!-- Checkbox for birthday pledge -->
+                        <div class="mb-4 flex items-center">
+                            <input type="checkbox" id="pledge-birthday" name="pledge-birthday" class="mr-2">
+                            <label for="pledge-birthday" class="text-black text-sm">Remind me to pledge my birthday and help change lives</label>
+                        </div>
+                        <!-- Subscribe button -->
+                        <button type="submit" class="bg-yellow-400 text-black py-2 px-6 rounded-full hover:bg-yellow-600 font-bold w-full">
+                            Subscribe
+                        </button>
+                        <!-- Disclaimer text -->
+                        <p class="text-xs text-gray-500 mt-2 text-center">
+                            By clicking “Subscribe”, you are submitting your information to charity: water.
+                        </p>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
