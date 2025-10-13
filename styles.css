@@ -54,6 +54,13 @@ body {
     background-color: #ffe066; /* A slightly lighter yellow */
 }
 
+/* Make yellow buttons darken on hover for Give Now and Donate Now */
+/* This targets both Tailwind and custom .button-yellow classes for beginners */
+.bg-yellow-400:hover,
+.button-yellow:hover {
+    background-color: #bfa004 !important; /* A darker yellow for hover */
+}
+
 /* Modifier class for a dark button variation */
 .button-dark {
     background-color: #1A1A1A; /* Black background */
