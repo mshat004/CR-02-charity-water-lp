@@ -8,13 +8,40 @@
     <!-- Tailwind CSS for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts (Inter) -->
+    <!-- Google Fonts (Avenir Next as fallback, since Proxima Nova is not on Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Use Avenir Next from Google Fonts as fallback -->
+    <link href="https://fonts.googleapis.com/css2?family=Avenir+Next:wght@400;700;900&display=swap" rel="stylesheet">
     
     <!-- Link to your custom CSS file -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Add Proxima Nova font from local fonts folder -->
+    <style>
+        /* Tell the browser where to find Proxima Nova font files */
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('fonts/ProximaNova-Regular.woff2') format('woff2'),
+                 url('fonts/ProximaNova-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('fonts/ProximaNova-Bold.woff2') format('woff2'),
+                 url('fonts/ProximaNova-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('fonts/ProximaNova-Black.woff2') format('woff2'),
+                 url('fonts/ProximaNova-Black.woff') format('woff');
+            font-weight: 900;
+            font-style: normal;
+        }
+    </style>
 </head>
 <body class="bg-black text-white">
 
@@ -88,6 +115,35 @@
                 </div>
             </div>
         </div>
+
+        <!-- Story Section -->
+        <section class="bg-white text-black py-12">
+            <!-- Container for the story content -->
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+                <!-- Story Image -->
+                <img src="img/story_sample.jpg" alt="A family with clean water" class="w-full md:w-1/2 rounded-lg mb-6 md:mb-0 md:mr-8">
+                <!-- Story Text -->
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4">Real Impact: Meet Grace's Family</h2>
+                    <p class="mb-4">
+                        Grace and her children used to walk miles every day to collect water. Now, thanks to your support, they have clean water right in their village. This means more time for school, work, and play.
+                    </p>
+                    <p>
+                        Your donation changes lives. Every dollar brings us closer to a world where everyone has access to clean water.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="bg-yellow-400 text-black py-10 text-center">
+            <!-- Simple call to action message and button -->
+            <h2 class="text-2xl font-bold mb-4">Ready to make a difference?</h2>
+            <p class="mb-6">Join us and help bring clean water to more families like Grace's.</p>
+            <a href="#" class="inline-block bg-black text-yellow-400 font-bold py-3 px-8 rounded-full hover:bg-gray-800 transition-colors duration-300">
+                Donate Now
+            </a>
+        </section>
     </main>
 
     <!-- Simple Footer -->

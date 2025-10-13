@@ -1,6 +1,11 @@
+/* Shift the hero image up to show more of the family */
+.hero-section {
+    /* Show the very top of the image */
+    background-position: top center;
+}
 /* Make the page take full height and push footer to the bottom */
 html, body {
-    height: 100%;
+    height: 200%;
     margin: 0;
     padding: 0;
 }
@@ -14,12 +19,15 @@ body {
 main {
     flex: 1;
 }
-/* Use the Inter font family defined in the Google Fonts link */
+/* Use Proxima Nova as the main font, with Avenir Next and sans-serif as fallbacks */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Proxima Nova', 'Avenir Next', Arial, sans-serif;
 }
 
-/* Custom hero section height for better visual balance */
+/* Custom hero section height for a bigger image */
 .hero-section {
-    height: calc(100vh - 80px); /* Full viewport height minus header height */
+    height: calc(100vh - 40px); /* Make hero section taller for a bigger image */
+    min-height: 500px; /* Ensure it's always big on small screens */
 }
+
+/* Footer stays at the bottom using flex layout (already set above) */
