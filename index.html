@@ -19,8 +19,8 @@
             <!-- Logo: White text version for contrast on dark header -->
             <a href="#"><img src="img/charitywater_logo_horizontal_WhiteText.png" alt="charity: water logo" class="h-7 w-auto"></a>
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-12 text-sm font-bold tracking-wider">
-                <!-- Added tracking-wider for more letter spacing -->
+            <nav class="hidden md:flex items-center space-x-12 text-lg font-bold tracking-wider">
+                <!-- Changed text-sm to text-lg for bigger navigation text -->
                 <a href="#take-action" class="text-white hover:text-yellow-400">Take Action</a>
                 <a href="#story" class="text-white hover:text-yellow-400">Our Impact</a>
                 <a href="#about" class="text-white hover:text-yellow-400">Why Water?</a>
@@ -33,10 +33,11 @@
         </div>
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90">
-            <a href="#take-action" class="block text-center py-3 px-6 text-white hover:bg-gray-800">Take Action</a>
-            <a href="#story" class="block text-center py-3 px-6 text-white hover:bg-gray-800">Our Impact</a>
-            <a href="#about" class="block text-center py-3 px-6 text-white hover:bg-gray-800">Why Water?</a>
-            <a href="#cta" class="block text-center py-4 px-6 mt-2 mb-4 mx-6 bg-yellow-400 text-black rounded-full hover:bg-yellow-300">Give Now</a>
+            <!-- Increased text size for mobile nav links using text-lg -->
+            <a href="#take-action" class="block text-center py-3 px-6 text-white hover:bg-gray-800 text-lg">Take Action</a>
+            <a href="#story" class="block text-center py-3 px-6 text-white hover:bg-gray-800 text-lg">Our Impact</a>
+            <a href="#about" class="block text-center py-3 px-6 text-white hover:bg-gray-800 text-lg">Why Water?</a>
+            <a href="#cta" class="block text-center py-4 px-6 mt-2 mb-4 mx-6 bg-yellow-400 text-black rounded-full hover:bg-yellow-300 text-lg">Give Now</a>
         </div>
     </header>
 
@@ -55,19 +56,25 @@
                     </p>
                     <!-- Center the Donate Now button -->
                     <div class="flex justify-center mt-8">
-                        <a href="#cta" class="bg-yellow-400 text-black py-2 px-6 rounded-full hover:bg-yellow-300 font-bold inline-block">
-                            Donate Now
+                        <a href="#cta" class="bg-yellow-400 text-black py-2 px-6 rounded-full hover:bg-yellow-600 font-bold mt-8 inline-block">
+                            Give Clean Water
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- Move the location indicator to the right side of the hero -->
-            <div class="absolute top-8 right-8">
-                <!-- Black background with opacity for readability -->
+            <!-- Location indicator for desktop: top right -->
+            <div class="absolute top-8 right-8 hidden md:block">
                 <div class="flex items-center space-x-2 text-white bg-black bg-opacity-60 px-4 py-2 rounded">
-                    <!-- Change icon color to yellow using text-yellow-400 -->
                     <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                     <span class="text-xl font-semibold">Zimbabwe</span>
+                </div>
+            </div>
+            <!-- Location indicator for mobile: bottom left, slightly smaller -->
+            <div class="absolute bottom-6 left-6 md:hidden">
+                <!-- Show only on mobile (md:hidden) -->
+                <div class="flex items-center space-x-2 text-white bg-black bg-opacity-60 px-3 py-1.5 rounded">
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-semibold">Zimbabwe</span>
                 </div>
             </div>
         </div>
@@ -105,56 +112,71 @@
         </section>
 
         <!-- Call to Action Section: Encourages users to donate -->
-        <section id="cta" class="bg-yellow-400 py-20">
+        <section id="cta" class="py-20" style="background-color: #FFF7E1;">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl font-black text-black uppercase">Ready to Make a Difference?</h2>
                 <p class="mt-4 text-xl text-black max-w-2xl mx-auto">
                     Join us in the mission to bring clean and safe drinking water to every person on the planet. Your contribution, big or small, changes lives.
                 </p>
-                <a href="#" class="bg-black text-yellow-400 py-2 px-6 rounded-full hover:bg-gray-800 font-bold mt-8 inline-block">
+                <a href="#" class="bg-yellow-400 text-black py-2 px-6 rounded-full hover:bg-yellow-600 font-bold mt-8 inline-block">
                     Give Clean Water
                 </a>
                 <!-- Horizontally scrollable action cards section for beginners -->
                 <div class="mt-12 overflow-x-auto">
-                    <div class="flex space-x-6 pb-4" style="min-width:600px;">
-                        <!-- Each card is a simple div with an image and bold text -->
-                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                            <img src="https://placehold.co/120x80?text=Image" alt="Join Monthly Giving" class="mb-3 rounded">
-                            <span class="font-bold text-center">Join Monthly Giving</span>
+                    <div class="flex space-x-12 pb-4" style="min-width:1100px;">
+                        <!-- Action card with image, description, and button, image is visible -->
+                        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow p-8 flex flex-col items-center transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                            <img src="img/Join_Monthly_Giving.jpg" alt="Join Monthly Giving" class="mb-6 rounded w-64 h-44 object-cover">
+                            <span class="font-bold text-center text-black text-xl mb-2">Join Monthly Giving</span>
+                            <p class="text-gray-700 text-center text-base mb-4">Give monthly to help more people get clean water all year long.</p>
+                            <button class="bg-yellow-400 text-black py-2 px-6 rounded-full font-bold hover:bg-yellow-600 transition-colors">Review</button>
                         </div>
-                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                            <img src="https://placehold.co/120x80?text=Image" alt="Sponsor a Water Project" class="mb-3 rounded">
-                            <span class="font-bold text-center">Sponsor a Water Project</span>
+                        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow p-8 flex flex-col items-center transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                            <img src="img/Sponsor_a_Water_Project.jpg" alt="Sponsor a Water Project" class="mb-6 rounded w-64 h-44 object-cover">
+                            <span class="font-bold text-center text-black text-xl mb-2">Sponsor a Water Project</span>
+                            <p class="text-gray-700 text-center text-base mb-4">Fund an entire water project and change a community’s future.</p>
+                            <button class="bg-yellow-400 text-black py-2 px-6 rounded-full font-bold hover:bg-yellow-600 transition-colors">Review</button>
                         </div>
-                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                            <img src="https://placehold.co/120x80?text=Image" alt="Start a Fundraiser" class="mb-3 rounded">
-                            <span class="font-bold text-center">Start a Fundraiser</span>
+                        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow p-8 flex flex-col items-center transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                            <img src="img/Start_a_Fundraiser.jpg" alt="Start a Fundraiser" class="mb-6 rounded w-64 h-44 object-cover">
+                            <span class="font-bold text-center text-black text-xl mb-2">Start a Fundraiser</span>
+                            <p class="text-gray-700 text-center text-base mb-4">Create your own fundraiser to help bring clean water to more people.</p>
+                            <button class="bg-yellow-400 text-black py-2 px-6 rounded-full font-bold hover:bg-yellow-600 transition-colors">Review</button>
                         </div>
-                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                            <img src="https://placehold.co/120x80?text=Image" alt="Give to a Fundraiser" class="mb-3 rounded">
-                            <span class="font-bold text-center">Give to a Fundraiser</span>
+                        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow p-8 flex flex-col items-center transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                            <img src="img/Give_to_a_Fundraiser.jpg" alt="Give to a Fundraiser" class="mb-6 rounded w-64 h-44 object-cover">
+                            <span class="font-bold text-center text-black text-xl mb-2">Give to a Fundraiser</span>
+                            <p class="text-gray-700 text-center text-base mb-4">Support a friend’s fundraiser and help them reach their goal.</p>
+                            <button class="bg-yellow-400 text-black py-2 px-6 rounded-full font-bold hover:bg-yellow-600 transition-colors">Review</button>
                         </div>
-                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                            <img src="https://placehold.co/120x80?text=Image" alt="Plan Legacy Giving" class="mb-3 rounded">
-                            <span class="font-bold text-center">Plan Legacy Giving</span>
+                        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow p-8 flex flex-col items-center transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                            <img src="img/Plan_Legacy_Giving.jpg" alt="Plan Legacy Giving" class="mb-6 rounded w-64 h-44 object-cover">
+                            <span class="font-bold text-center text-black text-xl mb-2">Plan Legacy Giving</span>
+                            <p class="text-gray-700 text-center text-base mb-4">Leave a legacy by including clean water in your will or estate plan.</p>
+                            <button class="bg-yellow-400 text-black py-2 px-6 rounded-full font-bold hover:bg-yellow-600 transition-colors">Review</button>
                         </div>
-                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                            <img src="https://placehold.co/120x80?text=Image" alt="Become a Brand Partner" class="mb-3 rounded">
-                            <span class="font-bold text-center">Become a Brand Partner</span>
+                        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow p-8 flex flex-col items-center transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                            <img src="img/Become_A_Brand_Partner.jpg" alt="Become a Brand Partner" class="mb-6 rounded w-64 h-44 object-cover">
+                            <span class="font-bold text-center text-black text-xl mb-2">Become a Brand Partner</span>
+                            <p class="text-gray-700 text-center text-base mb-4">Partner your business or brand to make a bigger impact together.</p>
+                            <button class="bg-yellow-400 text-black py-2 px-6 rounded-full font-bold hover:bg-yellow-600 transition-colors">Review</button>
                         </div>
-                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                            <img src="https://placehold.co/120x80?text=Image" alt="Honor Someone Special" class="mb-3 rounded">
-                            <span class="font-bold text-center">Honor Someone Special</span>
+                        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow p-8 flex flex-col items-center transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                            <img src="img/Honor_Someone_Special.jpg" alt="Honor Someone Special" class="mb-6 rounded w-64 h-44 object-cover">
+                            <span class="font-bold text-center text-black text-xl mb-2">Honor Someone Special</span>
+                            <p class="text-gray-700 text-center text-base mb-4">Give in honor or memory of someone and change lives in their name.</p>
+                            <button class="bg-yellow-400 text-black py-2 px-6 rounded-full font-bold hover:bg-yellow-600 transition-colors">Review</button>
                         </div>
-                        <div class="flex-shrink-0 w-56 bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                            <img src="https://placehold.co/120x80?text=Image" alt="Join Tiny Heroes" class="mb-3 rounded">
-                            <span class="font-bold text-center">Join Tiny Heroes</span>
+                        <div class="flex-shrink-0 w-96 bg-white rounded-lg shadow p-8 flex flex-col items-center transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                            <img src="img/Join_Tiny_Heroes.jpg" alt="Join Tiny Heroes" class="mb-6 rounded w-64 h-44 object-cover">
+                            <span class="font-bold text-center text-black text-xl mb-2">Join Tiny Heroes</span>
+                            <p class="text-gray-700 text-center text-base mb-4">Kids can join Tiny Heroes and help bring clean water to families.</p>
+                            <button class="bg-yellow-400 text-black py-2 px-6 rounded-full font-bold hover:bg-yellow-600 transition-colors">Review</button>
                         </div>
                     </div>
                 </div>
                 <!-- Newsletter Subscribe Form Section -->
                 <div class="bg-white rounded-lg shadow-md p-8 mt-24 max-w-lg mx-auto text-left">
-                    <!-- Increased mt-12 to mt-24 to shift the inbox form further down -->
                     <h3 class="text-2xl font-bold text-black mb-2 text-center">Add Impact To Your Inbox</h3>
                     <p class="text-center text-gray-600 mb-4">Get our emails to stay in the know.</p>
                     <form>
@@ -196,6 +218,8 @@
                 </div>
             </div>
         </section>
+        <!-- Gradient transition between sections for beginners -->
+        <div class="h-8 w-full bg-gradient-to-b from-gray-50 via-white to-[#FFF7E1]"></div>
     </main>
 
     <!-- Footer: Simple copyright notice -->
