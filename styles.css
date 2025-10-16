@@ -11,7 +11,7 @@
 /* 2. Apply the brand font to the entire page */
 /* We use 'sans-serif' as a fallback if the font doesn't load */
 body {
-    font-family: 'Proxima Nova', sans-serif; 
+    font-family: 'Proxima Nova', Avenir, sans-serif;
 }
 
 /* 3. Style the Hero Section */
