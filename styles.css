@@ -12,6 +12,7 @@
 /* We use 'sans-serif' as a fallback if the font doesn't load */
 body {
     font-family: 'Proxima Nova', Avenir, sans-serif;
+    line-height: 4; /* Increased line spacing for better readability */
 }
 
 /* 3. Style the Hero Section */
